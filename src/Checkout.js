@@ -1,0 +1,36 @@
+import React from "react";
+export default class Checkout extends React.Component {
+  constructor(props) {
+    super(props);
+    this.openCheckout = this.openCheckout.bind(this);
+  }
+  openCheckout() {
+    let options = {
+      key: "rzp_test_rwVNqXFDCnSJjO",
+      name: "You Product",
+      amount: "100",
+      currency: "INR",
+      handler: response => {
+      	alert(response.razorpay_payment_id)
+      },
+      description: "Description of the Product",
+      notes: {
+        address: "hello world"
+      },
+      theme: {
+        image_frame: false
+      }
+    };
+    let rzp = new window.Razorpay(options);
+    rzp.open();
+  }
+   render() {
+    return (
+
+            <button onClick={this.openCheckout}>
+            
+              Pay With Razorpay
+            </button>
+    );
+  }
+}
