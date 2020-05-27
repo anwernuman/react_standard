@@ -10,6 +10,8 @@ export default class Checkout extends React.Component {
       name: "You Product",
       amount: "100",
       currency: "INR",
+      callback_url:"https://www.google.com",
+      redirect:"true",
       handler: response => {
       	alert(response.razorpay_payment_id)
       },
