@@ -6,7 +6,7 @@ export default class Checkout extends React.Component {
   }
   openCheckout() {
     let options = {
-      key: "rzp_test_rwVNqXFDCnSJjO",
+      key: "YOUR_KEY_ID", // Enter the Key ID generated from the Dashboard
       name: "You Product",
       amount: "100",
       currency: "INR",
